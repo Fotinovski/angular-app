@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+        <div class="text-center">
+            <h4>
+                Sign In
+            </h4>
+
+        </div>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" formControlName="username" class="form-control"
+                    [ngClass]="{'is-invalid':username.errors && username.touched}" id="username" placeholder="Username">
+                <div class="invalid-feedback" *ngIf="username.hasError('required')">
+                    Username is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" formControlName="password" class="form-control"
+                    [ngClass]="{'is-invalid':password.errors && password.touched}" id="password" placeholder="Password">
+                <div class="invalid-feedback" *ngIf="password.hasError('required')">
+                    Password is required
+                </div>
+                <div 
+                    style="margin-top: 10px; cursor: pointer; font-size: 12px; float: right; color: red;"
+                >
+                    <a routerLink="/forgot-password">Forgot Password</a>
+                </div>
+
+            </div>
+            <p class="d-flex justify-content-center mt-md-5">
+                <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="userForm.invalid">
+                    <!--  <i class="fas fa-save"></i>--> SIGN IN</button>
+                <button class="btn btn-danger" style="float: right; opacity: 0.9; display: none;">
+                    <!--  <i class="fas fa-snowplow"></i> --> Clear</button>
+
+            </p>
+        </form>
+        <div class="account">
+            
+            <p >
+                If yoy dont have an account, sigin in <a>HERE</a>.
+            </p>
+        </div>
+    </div>
+
+</div>

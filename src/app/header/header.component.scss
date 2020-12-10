@@ -3,3 +3,14 @@ h1 {
   font-weight: 400;
   padding: 10px;
 }
+
+nav {
+  :not(:last-child){
+    padding-right: 1.5rem;
+  }
+  .sign-up {
+    color: white;
+    font-weight: 600;
+    
+  }
+}

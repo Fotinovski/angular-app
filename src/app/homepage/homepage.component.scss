@@ -1,0 +1,37 @@
+div {
+    padding: 0 10rem;
+    margin: 5rem auto;
+    text-align: center;
+    p {
+        opacity: 0.8;
+        margin-bottom: 0;
+
+        a {
+            color: red;
+            font-weight: bold;
+            font-size: 1.4em;
+            display: inline-block;
+            transition: all 0.2s ease-in;
+            &:hover {
+                transform: translateX(0.2rem);
+            }
+        }
+    }
+    h6 {
+        padding: 1.6rem 0;
+    }
+    button {
+        padding: 0.5rem 2rem;
+        font-weight: bold;
+        transition: all 0.1s ease-in;
+        i {
+            transition: all 0.2s ease-in;
+        }
+        &:hover {
+            font-size: 1.05em;
+            i {
+                transform: translateX(0.6rem);
+            }
+        }
+    }
+}
