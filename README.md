@@ -1,6 +1,6 @@
-## Angular Reactive Form
+# Angular Reactive Form
 
-# Homepage
-# Sign up form
-# Sign in form
-# Forgot password 
+## Homepage
+## Sign up form
+## Sign in form
+## Forgot password 
