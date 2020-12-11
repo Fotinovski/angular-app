@@ -20,6 +20,7 @@ export class SignUpComponent implements OnInit {
         [Validators.required, Validators.minLength(3)],
         this.customValidator.validateUsernameNotTaken.bind(this.customValidator)
       ],
+      email:["",[Validators.required, Validators.email]],
       password: ["", Validators.required],
       confirmPassword: ["", Validators.required],
       address: this.fb.group({
@@ -43,6 +44,10 @@ export class SignUpComponent implements OnInit {
     return this.userForm.get("username");
   }
 
+  get email() {
+    return this.userForm.get("email");
+  }
+
   get confirmPassword() {
     return this.userForm.get("confirmPassword");
   }
@@ -53,10 +58,10 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {}
 
-  clear() {
-    this.userForm.reset();
-    this.username.setValue("");
-  }
+  // clear() {
+  //   this.userForm.reset();
+  //   this.username.setValue("");
+  // }
 
   onSubmit() {
     console.log(this.userForm.value);
