@@ -18,7 +18,7 @@
                     Username is required
                 </div>
                 <div class="invalid-feedback" *ngIf="username.hasError('minlength')">
-                    Username must be at least 3 characters
+                    Username must be at least 4 characters long.
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
                 </div>
                 <div class="invalid-feedback" *ngIf="email.hasError('email')">
                     Email must have (@) symbol and not to begin or end with a period (.)
-                </div>
+                </div>                
             </div>
 
             <div class="form-group">
@@ -40,6 +40,9 @@
                     [ngClass]="{'is-invalid':password.errors && password.touched}" id="password" placeholder="Password">
                 <div class="invalid-feedback" *ngIf="password.hasError('required')">
                     Password is required
+                </div>
+                <div class="invalid-feedback" *ngIf="password.hasError('minlength')">
+                    Password must be at least 5 characters long.
                 </div>
             </div>
 
@@ -82,7 +85,7 @@
 
             <p class="d-flex justify-content-center mt-md-5">
                 <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="userForm.invalid">
-                    <!--  <i class="fas fa-save"></i>--> SIGN UP
+                     SIGN UP
                 </button>
                 <!-- <button class="btn btn-danger" style="float: right; opacity: 0.9; display: none;" (click)="clear()">
                      <i class="fas fa-snowplow"></i> Clear
@@ -92,5 +95,6 @@
         </form>
 
     </div>
+
 
 </div>

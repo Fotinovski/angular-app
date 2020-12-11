@@ -1,1 +1,6 @@
-## Just simple angular application with sign-up and sign-in form
+## Angular Reactive Form
+
+# Homepage
+# Sign up form
+# Sign in form
+# Forgot password 

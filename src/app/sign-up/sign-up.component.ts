@@ -17,11 +17,11 @@ export class SignUpComponent implements OnInit {
     {
       username: [
         "",
-        [Validators.required, Validators.minLength(3)],
+        [Validators.required, Validators.minLength(4)],
         this.customValidator.validateUsernameNotTaken.bind(this.customValidator)
       ],
       email:["",[Validators.required, Validators.email]],
-      password: ["", Validators.required],
+      password: ["", [Validators.required, Validators.minLength(5)]],
       confirmPassword: ["", Validators.required],
       address: this.fb.group({
         street: [""],
@@ -63,7 +63,9 @@ export class SignUpComponent implements OnInit {
   //   this.username.setValue("");
   // }
 
+  
   onSubmit() {
     console.log(this.userForm.value);
+    alert(`You submited this form SUCCESSFULY`)
   }
 }
