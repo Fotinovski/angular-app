@@ -8,11 +8,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  
+
   constructor( private fb: FormBuilder){}
 
   forgotPasswordGroup = this.fb.group({
-    email:["",[Validators.required, Validators.email]],
+    email:["",[Validators.required, Validators.email, Validators.minLength(5)]],
  });
 
  get email() {
@@ -25,6 +25,6 @@ export class ForgotPasswordComponent implements OnInit {
   onSubmit(){
     console.log(this.forgotPasswordGroup.value)
   }
- 
+
 
 }
